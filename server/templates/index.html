@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#09090b">
+  <title>Helen's Barber Shop | Elite Men's Grooming</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- CSS from static folder -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  
+  <style>
+    @keyframes gentle-shake {
+      0%, 100% { transform: rotate(0deg) scale(1); }
+      20% { transform: rotate(-10deg) scale(1.05); }
+      40% { transform: rotate(10deg) scale(1.05); }
+      60% { transform: rotate(-6deg) scale(1); }
+      80% { transform: rotate(6deg) scale(1); }
+    }
+    .shake-gemini {
+      animation: gentle-shake 2.5s infinite ease-in-out;
+    }
+  </style>
+</head>
+<body data-page="home">
+  <div class="site-noise"></div>
+  <header class="site-header">
+    
+<a class="brand" href="{{ url_for('index') }}" aria-label="Helen's Barber Shop home">
+  <img src="{{ url_for('static', filename='logo.png') }}" alt="Helen's Barber Shop Logo" class="brand-logo">
+</a>
+    <button class="mobile-menu" aria-label="Toggle navigation">☰</button>
+   <nav class="main-nav">
+  <a href="{{ url_for('index') }}">Home</a>
+  <a href="{{ url_for('about') }}">About Us</a>
+  <a href="{{ url_for('services') }}">Services</a>
+  <a href="{{ url_for('gallery') }}">Gallery</a>
+  <a href="{{ url_for('feedback') }}">Customer Reviews</a>
+  <a href="{{ url_for('contact') }}">Contact</a>
+</nav>
+    <div class="header-actions">
+      <a id="authBtn" class="text-button" href="{{ url_for('login') }}">Sign In / Sign Up</a>
+      <button class="red-button" data-book>Book Appointment <span>↗</span></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-wrap reveal">
+      <div class="hero-copy">
+        <p class="eyebrow">ESTABLISHED <span>SINCE 2008</span></p>
+        <h1>ELITE MEN'S<br><em>GROOMING.</em></h1>
+        <p class="hero-sub">Old-school precision. Modern edge.<br>Every cut is a signature.</p>
+        <div class="hero-actions">
+          <button class="red-button" data-book>Reserve your chair <span>↗</span></button>
+          <a class="outline-button" href="services.html">Explore services <span>↓</span></a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="{{ url_for('static', filename='Main Haircut.png') }}" alt="Barber giving a precise haircut">
+        <div class="hero-stamp">LOS ANGELES<br><b>EST. 2008</b></div>
+      </div>
+      <div class="hero-watermark">CRAFTSMANSHIP</div>
+    </section>
+
+    <div class="perks reveal">
+      <div><b>01</b><span class="perk-icon">✦</span><span><strong>15+ YRS</strong><small>EXPERIENCE</small></span></div>
+      <div><b>02</b><span class="perk-icon">◈</span><span><strong>PREMIUM</strong><small>PRODUCTS</small></span></div>
+      <div><b>03</b><span class="perk-icon">♨</span><span><strong>HOT TOWEL</strong><small>SHAVE</small></span></div>
+      <div><b>04</b><span class="perk-icon">★</span><span><strong>5-STAR</strong><small>RATING</small></span></div>
+    </div>
+
+    <div class="section-shell">
+      <div class="section-heading reveal">
+        <div>
+          <p class="eyebrow">THE HELEN'S EXPERIENCE</p>
+          <h2>Every room.<br><em>One standard.</em></h2>
+        </div>
+        <p class="section-note">A space designed for the ritual of looking your best. Find your chair, settle in, and let the craft speak.</p>
+      </div>
+      <div class="facility-grid">
+        <article class="facility large reveal">
+          <img src="{{ url_for('static', filename='Main Haircut.png') }}" alt="Men's haircut station">
+          <div><span>01 / THE CLASSIC</span><h3>Main Haircut<br>& Beard Station</h3><a href="services.html">Discover →</a></div>
+        </article>
+        <article class="facility reveal">
+          <img src="{{ url_for('static', filename="Women's Styling.png") }}" alt="Women's styling lounge">
+          <div><span>02 / THE LOUNGE</span><h3>Women's Styling<br>& Color Lounge</h3></div>
+        </article>
+        <article class="facility reveal">
+          <img src="{{ url_for('static', filename='VIP Grooming.png') }}" alt="Grooming suite">
+          <div><span>03 / THE PRIVATE</span><h3>VIP Grooming<br>& Facial Suite</h3></div>
+        </article>
+        <article class="facility reveal">
+          <img src="{{ url_for('static', filename='Kids Special.png') }}" alt="Child getting haircut">
+          <div><span>04 / THE YOUNG GENTS</span><h3>Kids Special<br>Haircut Zone</h3></div>
+        </article>
+      </div>
+    </div>
+
+    <section class="marquee-section reveal" aria-label="Recent work">
+      <div class="marquee-track">
+        <img src="{{ url_for('static', filename='Low fade textured top.png') }}" alt="Low fade and textured top">
+        <img src="{{ url_for('static', filename='Classic gentleman cut.png') }}" alt="Classic gentleman cut">
+        <img src="{{ url_for('static', filename='The signature beard line-up.png') }}" alt="Signature beard line-up">
+        <img src="{{ url_for('static', filename='Sharp. Simple. Yours.png') }}" alt="Sharp, simple haircut">
+        <img src="{{ url_for('static', filename='Precision in the chair.png') }}" alt="Precision haircut in the chair">
+        <img src="{{ url_for('static', filename='Low fade textured top.png') }}" alt="Low fade and textured top">
+        <img src="{{ url_for('static', filename='Classic gentleman cut.png') }}" alt="Classic gentleman cut">
+        <img src="{{ url_for('static', filename='The signature beard line-up.png') }}" alt="Signature beard line-up">
+        <img src="{{ url_for('static', filename='Sharp. Simple. Yours.png') }}" alt="Sharp, simple haircut">
+        <img src="{{ url_for('static', filename='Precision in the chair.png') }}" alt="Precision haircut in the chair">
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-[#09090b] border-t border-red-900/30 text-slate-400 py-16 px-8">
+    <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-5 gap-8">
+      <div>
+        <h4 class="text-white font-bold text-lg mb-4">Company</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="about.html" class="hover:text-red-500 transition-colors">About Us</a></li>
+          <li><a href="about.html" class="hover:text-red-500 transition-colors">Careers</a></li>
+          <li><a href="feedback.html" class="hover:text-red-500 transition-colors">FAQs</a></li>
+          <li><a href="contact.html" class="hover:text-red-500 transition-colors">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-white font-bold text-lg mb-4">Services</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="services.html" class="hover:text-red-500 transition-colors">Fades & Tapers</a></li>
+          <li><a href="services.html" class="hover:text-red-500 transition-colors">Hot Towel Shave</a></li>
+          <li><a href="services.html" class="hover:text-red-500 transition-colors">Beard Trimming</a></li>
+          <li><a href="services.html" class="hover:text-red-500 transition-colors">Black Mask Facial</a></li>
+          <li><a href="services.html" class="hover:text-red-500 transition-colors">Combo Deals</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-white font-bold text-lg mb-4">Resources</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="gallery.html" class="hover:text-red-500 transition-colors">Photo Gallery</a></li>
+          <li><a href="feedback.html" class="hover:text-red-500 transition-colors">Customer Reviews</a></li>
+          <li><a href="services.html" class="hover:text-red-500 transition-colors">Pricing Menu</a></li>
+          <li><a href="contact.html" class="hover:text-red-500 transition-colors">Shop Location</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-white font-bold text-lg mb-4">Legal</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#" class="hover:text-red-500 transition-colors">Privacy Policy</a></li>
+          <li><a href="#" class="hover:text-red-500 transition-colors">Security</a></li>
+          <li><a href="#" class="hover:text-red-500 transition-colors">Terms of Use</a></li>
+          <li><a href="#" class="hover:text-red-500 transition-colors">Cookies Policy</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-white font-bold text-lg mb-4">Contact</h4>
+        <div class="space-y-2 text-sm">
+          <p class="text-slate-300">2006 Firestone Blvd, Los Angeles, CA 90001</p>
+          <p class="text-slate-300">(323) 581-9211</p>
+          <p class="text-slate-300">(213) 306-8933</p>
+          <p class="text-red-500 font-semibold">Mon - Sat: 10:00 AM - 6:00 PM</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto mt-12 pt-6 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
+      <p>© 2026 Helen's Barber Shop. All rights reserved.</p>
+      <div class="flex space-x-6 text-sm">
+        <a href="#" class="hover:text-red-500 transition-colors">Instagram</a>
+        <a href="#" class="hover:text-red-500 transition-colors">Facebook</a>
+        <a href="#" class="hover:text-red-500 transition-colors">TikTok</a>
+        <a href="#" class="hover:text-red-500 transition-colors">WhatsApp</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Chatbot Toggle Button -->
+  <div id="aiChatbotBtn" class="fixed bottom-6 right-6 z-50 cursor-pointer shake-gemini bg-gradient-to-r from-red-600 to-red-800 p-4 rounded-full shadow-[0_0_20px_rgba(220,38,38,0.6)] hover:scale-110 transition-transform">
+    <svg class="w-7 h-7 fill-white" viewBox="0 0 24 24">
+      <path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z"/>
+    </svg>
+  </div>
+
+  <!-- AI Chatbot Box / Modal Window -->
+  <div id="aiChatModal" class="fixed bottom-24 right-6 w-80 md:w-96 bg-[#121215] border border-red-900/50 rounded-2xl shadow-2xl z-50 hidden flex-col overflow-hidden transition-all duration-300">
+    <!-- Chat Header -->
+    <div class="bg-gradient-to-r from-red-950 to-zinc-900 p-4 border-b border-red-900/40 flex justify-between items-center">
+      <div class="flex items-center space-x-2">
+        <div class="w-3 h-3 bg-red-500 rounded-full animate-pulse"></div>
+        <h3 class="text-white font-bold text-sm tracking-wider uppercase">Helen's AI Assistant</h3>
+      </div>
+      <button id="closeChatBtn" class="text-slate-400 hover:text-white text-xl font-bold px-2">×</button>
+    </div>
+
+    <!-- Chat Messages Container -->
+    <div id="chat-messages" class="p-4 h-80 overflow-y-auto space-y-3 text-sm text-slate-200 flex flex-col">
+      <div class="bg-zinc-800/80 p-3 rounded-lg max-w-[85%] self-start border border-zinc-700/50">
+        Hello! Main Helen's Barber Shop ka AI Assistant hoon. Main aapki kya madad kar sakta hoon?
+      </div>
+    </div>
+
+    <!-- Chat Input Area -->
+    <div class="p-3 bg-zinc-900/90 border-t border-zinc-800 flex items-center gap-2">
+      <input type="text" id="chat-input" placeholder="Apna sawal yahan likhein..." class="flex-1 bg-zinc-800 text-white text-sm px-3 py-2 rounded-lg border border-zinc-700 focus:outline-none focus:border-red-600">
+      <button id="send-btn" class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg text-sm font-semibold transition-colors">➔</button>
+    </div>
+  </div>
+
+  <!-- Booking Modal -->
+  <div id="bookModal" class="modal">
+    <div class="modal-card booking-card">
+      <button class="modal-close">×</button>
+      <p class="eyebrow">RESERVE YOUR CHAIR</p>
+      <h2>THE NEXT<br><em>MOVE IS YOURS.</em></h2>
+      <form id="bookingForm">
+        <label>SELECT SERVICE
+          <select id="bookingService"></select>
+        </label>
+        <div class="form-two">
+          <label>DATE<input type="date" required></label>
+          <label>TIME
+            <select>
+              <option>10:00 AM</option>
+              <option>11:30 AM</option>
+              <option>1:00 PM</option>
+              <option>2:30 PM</option>
+              <option>4:00 PM</option>
+            </select>
+          </label>
+        </div>
+        <label>YOUR NAME<input required placeholder="Full name"></label>
+        <button class="red-button" type="submit">Request appointment <span>↗</span></button>
+      </form>
+      <a class="direct-call" href="tel:+13235819211">Or call direct: (323) 581-9211</a>
+    </div>
+  </div>
+
+  <!-- JS from static folder -->
+  <script src="{{ url_for('static', filename='main.js') }}"></script>
+</body>
+</html>

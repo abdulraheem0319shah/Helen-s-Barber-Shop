@@ -1,0 +1,19 @@
+server/
+├── instance/
+│   └── app.db            # Auto-created SQLite database
+├── models/
+│   ├── __init__.py
+│   ├── gallery.py
+│   ├── review.py
+│   └── service.py
+├── routes/
+|   |__chat_routes.py
+│   ├── __init__.py
+│   ├── gallery_routes.py
+│   ├── review_routes.py
+│   └── service_routes.py
+├── config.py
+├── database.py
+├── app.py
+├── requirements.txt
+└── .env

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#09090b">
+  <title>About | Helen's Barber Shop</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  <style>
+    @keyframes gentle-shake {
+      0%, 100% { transform: rotate(0deg) scale(1); }
+      20% { transform: rotate(-10deg) scale(1.05); }
+      40% { transform: rotate(10deg) scale(1.05); }
+      60% { transform: rotate(-6deg) scale(1); }
+      80% { transform: rotate(6deg) scale(1); }
+    }
+    .shake-gemini {
+      animation: gentle-shake 2.5s infinite ease-in-out;
+    }
+  </style>
+</head>
+<body data-page="about">
+  <div class="site-noise"></div>
+  <header class="site-header">
+    <a class="brand" href="index.html"><span>HELEN'S</span><strong>BARBER SHOP</strong></a>
+    <button class="mobile-menu">☰</button>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="services.html">Services</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="feedback.html">Customer Reviews</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <a class="text-button" href="login.html">Sign In / Sign Up</a>
+      <button class="red-button" data-book>Book Appointment <span>↗</span></button>
+    </div>
+  </header>
+
+  <main>
+    <div class="inner-page intro-grid">
+      <div class="reveal">
+        <p class="eyebrow">OUR STORY / LOS ANGELES</p>
+        <h1>CRAFT IS<br><em>PERSONAL.</em></h1>
+        <p class="lead">Helen's Barber Shop opened its doors on Firestone Boulevard in 2008 with a simple idea: a great haircut should feel like a reset.</p>
+        <p>What started as one chair and a pair of clippers has grown into a neighborhood institution. Our team brings classic barbering technique, honest conversation, and an exacting eye to every appointment.</p>
+        <button class="red-button" data-book>Take a seat <span>↗</span></button>
+      </div>
+      <div class="story-image reveal">
+        <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1100&q=85" alt="Barber working in the shop">
+        <span>15+<small>YEARS OF<br>CRAFT</small></span>
+      </div>
+    </div>
+
+    <div class="inner-page team">
+      <div class="section-heading reveal">
+        <div>
+          <p class="eyebrow">THE HANDS BEHIND THE CRAFT</p>
+          <h2>Meet the<br><em>master barbers.</em></h2>
+        </div>
+      </div>
+      <div class="team-grid">
+        <article class="reveal">
+          <img src="https://images.unsplash.com/photo-1580518324671-c2f0833a3af3?auto=format&fit=crop&w=600&q=85" alt="Portrait of Helen">
+          <h3>HELEN</h3>
+          <p>FOUNDER / MASTER BARBER</p>
+        </article>
+        <article class="reveal">
+          <img src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&w=600&q=85" alt="Portrait of Marcus">
+          <h3>MARCUS</h3>
+          <p>FADE SPECIALIST</p>
+        </article>
+        <article class="reveal">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=85" alt="Portrait of Andre">
+          <h3>ANDRE</h3>
+          <p>CLASSIC CUTS / BEARD</p>
+        </article>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-[#09090b] border-t border-red-900/30 text-slate-400 py-16 px-8">
+    <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-5 gap-8">
+      <div>
+        <h4 class="text-white font-bold text-lg mb-4">Company</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="about.html" class="hover:text-red-500 transition-colors">About Us</a></li>
+          <li><a href="about.html" class="hover:text-red-500 transition-colors">Careers</a></li>
+          <li><a href="feedback.html" class="hover:text-red-500 transition-colors">FAQs</a></li>
+          <li><a href="contact.html" class="hover:text-red-500 transition-colors">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-white font-bold text-lg mb-4">Services</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="services.html" class="hover:text-red-500 transition-colors">Fades & Tapers</a></li>
+          <li><a href="services.html" class="hover:text-red-500 transition-colors">Hot Towel Shave</a></li>
+          <li><a href="services.html" class="hover:text-red-500 transition-colors">Beard Trimming</a></li>
+          <li><a href="services.html" class="hover:text-red-500 transition-colors">Black Mask Facial</a></li>
+          <li><a href="services.html" class="hover:text-red-500 transition-colors">Combo Deals</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-white font-bold text-lg mb-4">Resources</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="gallery.html" class="hover:text-red-500 transition-colors">Photo Gallery</a></li>
+          <li><a href="feedback.html" class="hover:text-red-500 transition-colors">Customer Reviews</a></li>
+          <li><a href="services.html" class="hover:text-red-500 transition-colors">Pricing Menu</a></li>
+          <li><a href="contact.html" class="hover:text-red-500 transition-colors">Shop Location</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-white font-bold text-lg mb-4">Legal</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#" class="hover:text-red-500 transition-colors">Privacy Policy</a></li>
+          <li><a href="#" class="hover:text-red-500 transition-colors">Security</a></li>
+          <li><a href="#" class="hover:text-red-500 transition-colors">Terms of Use</a></li>
+          <li><a href="#" class="hover:text-red-500 transition-colors">Cookies Policy</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-white font-bold text-lg mb-4">Contact</h4>
+        <div class="space-y-2 text-sm">
+          <p class="text-slate-300">2006 Firestone Blvd, Los Angeles, CA 90001</p>
+          <p class="text-slate-300">(323) 581-9211</p>
+          <p class="text-slate-300">(213) 306-8933</p>
+          <p class="text-red-500 font-semibold">Mon - Sat: 10:00 AM - 6:00 PM</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto mt-12 pt-6 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
+      <p>© 2026 Helen's Barber Shop. All rights reserved.</p>
+      <div class="flex space-x-6 text-sm">
+        <a href="#" class="hover:text-red-500 transition-colors">Instagram</a>
+        <a href="#" class="hover:text-red-500 transition-colors">Facebook</a>
+        <a href="#" class="hover:text-red-500 transition-colors">TikTok</a>
+        <a href="#" class="hover:text-red-500 transition-colors">WhatsApp</a>
+      </div>
+    </div>
+  </footer>
+
+  <div id="aiChatbotBtn" class="fixed bottom-6 right-6 z-50 cursor-pointer shake-gemini bg-gradient-to-r from-red-600 to-red-800 p-4 rounded-full shadow-[0_0_20px_rgba(220,38,38,0.6)] hover:scale-110 transition-transform">
+    <svg class="w-7 h-7 fill-white" viewBox="0 0 24 24">
+      <path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z"/>
+    </svg>
+  </div>
+
+   <script src="{{ url_for('static', filename='main.js') }}"></script>
+</body>
+</html>
